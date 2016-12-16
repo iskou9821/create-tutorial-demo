@@ -8,7 +8,7 @@ tutorial.end = function() {
 	$('div.tutorial-screen').remove();	
 };
 
-tutorial.showDialog = function(element_path, page_path) {
+tutorial.showDialog = function(element_path, page_path, is_last) {
 	return $.get('./tutorial_dialog.html').then(function(html) {
 		$('body').append($(html));
 		return $.get(page_path);
@@ -25,7 +25,9 @@ tutorial.showDialog = function(element_path, page_path) {
 
 		var d = $.Deferred();
 		$('div.tutorial-dialog div.content div.next-button').click(function() {
-			element.removeClass('tutorial-dialog-target');
+			if (!is_last) {
+				element.removeClass('tutorial-dialog-target');
+			}
 			dialog.remove();
 			d.resolve();
 		});
