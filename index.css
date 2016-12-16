@@ -1,0 +1,76 @@
+@charset 'utf-8';
+
+h1 {
+	border:none;
+	padding:10px 0 10px 0;
+}
+	
+form div {
+	margin:10px
+}
+
+/* チュートリアル関連の要素 */
+div.tutorial-screen {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width:100%;
+    height:100%;
+    filter:alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+    background-color: #A0A0A0;
+    z-index: 50000;
+}
+
+div.tutorial-dialog {
+	display:none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 400px;
+    height: 150px;
+    background-color: #FFFFFF;
+	z-index: 50001;
+}
+
+div.tutorial-dialog div.content {
+	position:relative
+}
+
+div.tutorial-dialog div.content div.content-main {
+
+}
+
+div.tutorial-dialog div.content div.next-button {
+	position: absolute;
+    right:  0px;
+	top: 110px;
+    width:  82px;
+    height: 28px;
+	color:#FFFFFF;
+	background-color: #C4D9E2;
+    cursor: pointer;
+	text-align: center;
+	font-size:9px;
+	line-height: 28px;
+}
+
+div.tutorial-dialog div.content div.cancel-button {
+	position: absolute;
+    left:  0px;
+	top: 110px;
+    width:  82px;
+    height: 28px;
+	background-color: #A0A0A0;
+    cursor: pointer;
+	text-align: center;
+	font-size:9px;
+	line-height: 28px;
+}
+
+.tutorial-dialog-target {
+    box-shadow: rgb(255, 255, 255) 0 0 0 5px;
+    z-index: 60000;
+    position: relative;
+}
